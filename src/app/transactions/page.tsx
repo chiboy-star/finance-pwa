@@ -185,7 +185,7 @@ export default function TransactionsPage() {
                       <Pie data={expensesByReason} cx="50%" cy="50%" innerRadius={60} outerRadius={100} paddingAngle={5} dataKey="value">
                         {expensesByReason.map((entry, index) => (<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />))}
                       </Pie>
-                      <Tooltip formatter={(value: number) => formatMoney(value)} />
+                      <Tooltip formatter={(value: any) => formatMoney(value as number)} />
                       <Legend />
                     </PieChart>
                   </ResponsiveContainer>
